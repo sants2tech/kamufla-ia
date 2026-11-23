@@ -3,6 +3,20 @@
 ## OpenAI, OpenRouter e Venice
 Configure a URL base, chave válida e um modelo habilitado na conta. O aplicativo envia uma solicitação `POST /chat/completions` com streaming ativado.
 
+## Free Claude Code hospedado em VPS
+1. Implante o FCC conforme [DEPLOY-VPS-GRATUITA.md](DEPLOY-VPS-GRATUITA.md).
+2. No painel administrativo do FCC, configure pelo menos um provedor/modelo e habilite **Proxy Authentication**.
+3. Acesse o painel somente por túnel SSH; não publique a interface administrativa.
+4. No Kamufla IA, abra **Configurações** e escolha **Free Claude Code (VPS)**.
+5. Em URL base, informe `https://SEU-DOMINIO/v1`.
+6. Em Chave API, informe o bearer token configurado no FCC.
+7. Em Modelo, use exatamente o identificador apresentado pelo FCC.
+8. Salve e teste uma conversa curta.
+
+O navegador chama `/chat/completions` e o FCC fornece API compatível com OpenAI. A configuração Caddy de exemplo libera CORS apenas para `https://sants2tech.github.io` e encaminha somente `/v1/*`. Não exponha a porta 8082 diretamente.
+
+**Atenção:** o token FCC ficará salvo no `localStorage` do navegador. Use somente dispositivos confiáveis. Modelos gratuitos, quotas e disponibilidade dependem de cada provedor; o FCC não garante uso ilimitado nem transforma modelos pagos em gratuitos.
+
 ## Ollama
 1. Instale e execute Ollama no computador.
 2. Baixe um modelo, por exemplo: `ollama pull llama3.2`.
@@ -11,14 +25,14 @@ Configure a URL base, chave válida e um modelo habilitado na conta. O aplicativ
 5. Não exponha o serviço Ollama diretamente à internet sem autenticação e proteção de rede.
 
 ## Erros comuns
-- **401/403:** chave ausente, inválida ou sem permissão.
+- **401/403:** chave/token ausente, inválido ou sem permissão.
 - **404:** endpoint ou modelo incorreto.
 - **429:** limite de requisições ou créditos atingido.
-- **Failed to fetch / CORS:** endpoint indisponível, bloqueio de origem ou política de rede.
+- **Failed to fetch / CORS:** endpoint indisponível, HTTPS/CORS ou política de rede.
 - **Resposta vazia:** verifique compatibilidade com Chat Completions e SSE.
 
 ## Comparação
 Ative **Comparar modelos** e informe de 2 a 5 IDs separados por vírgula. Cada modelo gera uma chamada individual; o provedor pode cobrar cada uma.
 
 ## Limitações
-Esta versão é estática: não possui autenticação multiusuário, banco remoto, proxy de API, sincronização entre dispositivos, upload de arquivos ou execução de ferramentas externas.
+Esta versão continua com histórico local e sem banco remoto ou sincronização entre dispositivos. A integração VPS requer provisionar a VM, configurar domínio/HTTPS e autenticação. O GitHub Pages publica apenas a interface; ele não provisiona nem hospeda o processo FCC.
