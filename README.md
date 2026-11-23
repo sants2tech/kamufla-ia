@@ -26,7 +26,7 @@ Projeto independente com referência conceitual ao [G0DM0D3](https://github.com/
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
 | OpenRouter | `https://openrouter.ai/api/v1` | `openai/gpt-4o-mini` |
 | Venice | `https://api.venice.ai/api/v1` | `llama-3.3-70b` |
-| NVIDIA NIM | `https://integrate.api.nvidia.com/v1` | `meta/llama-3.1-8b-instruct` (exemplo; confirme no catálogo) |
+| NVIDIA NIM | `https://kamufla-nvidia-proxy.matheuusmendes0.workers.dev/v1` | `meta/llama-3.1-8b-instruct` (exemplo; confirme no catálogo) |
 | Ollama | `http://localhost:11434/v1` | `llama3.2` |
 | Free Claude Code (VPS) | `https://SEU-DOMINIO/v1` | ID exibido pelo painel FCC |
 
