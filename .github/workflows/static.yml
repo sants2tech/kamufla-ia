@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -28,14 +29,11 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Preparar artefato único
+      - name: Enviar artefato do Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          name: kamufla-ia-pages
           path: .
 
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v5
-        with:
-          artifact_name: kamufla-ia-pages
