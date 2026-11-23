@@ -1,0 +1,23 @@
+[Unit]
+Description=Free Claude Code API server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=fcc
+Group=fcc
+WorkingDirectory=/opt/fcc-app
+Environment=HOME=/opt/fcc-data
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/local/bin/uv run --no-sync uvicorn server:app --host 127.0.0.1 --port 8082
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/fcc-data /opt/fcc-app
+
+[Install]
+WantedBy=multi-user.target
