@@ -5,7 +5,7 @@ Assistente multimodelo em **português brasileiro**, com interface de chat respo
 Projeto independente com referência conceitual ao [G0DM0D3](https://github.com/elder-plinius/G0DM0D3). Não é afiliado à OpenAI, OpenRouter, Venice, Ollama ou ao projeto Free Claude Code.
 
 ## Recursos
-- Provedores OpenAI, OpenRouter, Venice e Ollama (API compatível com OpenAI).
+- Provedores OpenAI, OpenRouter, Venice, NVIDIA NIM e Ollama (API compatível com OpenAI).
 - Integração opcional com **Free Claude Code hospedado em VPS**, usando API OpenAI Chat Completions.
 - Respostas em streaming.
 - Comparação paralela de 2 a 5 modelos do provedor selecionado.
@@ -26,10 +26,11 @@ Projeto independente com referência conceitual ao [G0DM0D3](https://github.com/
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
 | OpenRouter | `https://openrouter.ai/api/v1` | `openai/gpt-4o-mini` |
 | Venice | `https://api.venice.ai/api/v1` | `llama-3.3-70b` |
+| NVIDIA NIM | `https://integrate.api.nvidia.com/v1` | `meta/llama-3.1-8b-instruct` (exemplo; confirme no catálogo) |
 | Ollama | `http://localhost:11434/v1` | `llama3.2` |
 | Free Claude Code (VPS) | `https://SEU-DOMINIO/v1` | ID exibido pelo painel FCC |
 
-Os nomes e permissões dos modelos dependem do provedor e da sua conta.
+Os nomes e permissões dos modelos dependem do provedor e da sua conta. Para NVIDIA, gere uma chave em https://build.nvidia.com/settings e selecione um modelo disponível no catálogo NVIDIA.
 
 ## Free Claude Code em VPS gratuita
 
