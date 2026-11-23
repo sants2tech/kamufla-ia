@@ -30,7 +30,7 @@ Projeto independente com referência conceitual ao [G0DM0D3](https://github.com/
 | Ollama | `http://localhost:11434/v1` | `llama3.2` |
 | Free Claude Code (VPS) | `https://SEU-DOMINIO/v1` | ID exibido pelo painel FCC |
 
-Os nomes e permissões dos modelos dependem do provedor e da sua conta. Para NVIDIA, gere uma chave em https://build.nvidia.com/settings e selecione um modelo disponível no catálogo NVIDIA.
+Os nomes e permissões dos modelos dependem do provedor e da sua conta. Para NVIDIA, gere uma chave em https://build.nvidia.com/settings e selecione um modelo disponível no catálogo NVIDIA. **No GitHub Pages, a NVIDIA exige um proxy por causa de CORS:** siga [docs/NVIDIA-CLOUDFLARE-WORKER.md](docs/NVIDIA-CLOUDFLARE-WORKER.md) para publicar o Worker e usar sua URL como base (`https://SEU-WORKER.workers.dev/v1`).
 
 ## Free Claude Code em VPS gratuita
 
