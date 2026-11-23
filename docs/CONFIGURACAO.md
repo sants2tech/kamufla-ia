@@ -17,6 +17,16 @@ O navegador chama `/chat/completions` e o FCC fornece API compatível com OpenAI
 
 **Atenção:** o token FCC ficará salvo no `localStorage` do navegador. Use somente dispositivos confiáveis. Modelos gratuitos, quotas e disponibilidade dependem de cada provedor; o FCC não garante uso ilimitado nem transforma modelos pagos em gratuitos.
 
+## NVIDIA NIM
+1. Crie uma chave em [NVIDIA Build](https://build.nvidia.com/settings).
+2. No Kamufla IA, selecione **NVIDIA NIM**.
+3. Use a URL base `https://integrate.api.nvidia.com/v1`.
+4. Cole a chave no campo **Chave API** (não a compartilhe nem a publique).
+5. Informe o ID exato de um modelo disponível no [catálogo NVIDIA NIM](https://docs.api.nvidia.com/nim/reference/llm-apis), por exemplo `meta/llama-3.1-8b-instruct` se estiver habilitado para sua conta.
+6. Salve e envie uma mensagem de teste. A integração usa `POST /v1/chat/completions` com streaming.
+
+A disponibilidade, gratuidade, limites e modelos habilitados variam conforme a NVIDIA e a conta. Consulte o catálogo e os limites atuais antes de uso contínuo.
+
 ## Ollama
 1. Instale e execute Ollama no computador.
 2. Baixe um modelo, por exemplo: `ollama pull llama3.2`.
