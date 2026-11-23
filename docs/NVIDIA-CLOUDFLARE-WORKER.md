@@ -1,5 +1,7 @@
 # NVIDIA NIM no Kamufla IA (GitHub Pages)
 
+**Proxy já publicado:** `https://kamufla-nvidia-proxy.matheuusmendes0.workers.dev/v1`. O `index.html` atual já seleciona esse endereço automaticamente ao escolher NVIDIA NIM. Se você estiver usando a versão atual do site, não precisa criar outro Worker.
+
 O endpoint hospedado da NVIDIA pode bloquear chamadas diretas do navegador por CORS. Para usar NVIDIA NIM no GitHub Pages, publique o proxy deste repositório como um Cloudflare Worker.
 
 ## 1. Criar o Worker
